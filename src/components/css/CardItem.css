@@ -1,0 +1,59 @@
+.hinh-anh-khach-hang {
+  min-width: 50px;
+  max-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden; /* để ảnh không tràn ra ngoài */
+  display: inline-block;
+}
+
+.hinh-anh-khach-hang img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thong-tin-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.ten-std {
+  font-weight: bold;
+}
+.ten-std span{
+  font-weight: normal;
+  background-color: rgb(51, 73, 171);
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  font-size: calc( var(--font-size) - 2px);
+}
+.dia-chi-gmail span {
+  font-weight: normal;
+  background-color: rgb(133, 51, 171);
+  color: white;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  font-size: calc( var(--font-size) - 4px);
+}
+
+.thanh-nut{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 1.5rem;
+}
+.card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d0d0d0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
