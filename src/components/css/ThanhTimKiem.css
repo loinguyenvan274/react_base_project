@@ -31,6 +31,9 @@
   background-color: transparent;
   margin: 3px;
   color: #000;
+  border: none;
+  outline: none;
+  flex: 1;
 }
 
 .thanh-tim-kiem-icon {
@@ -46,11 +49,6 @@
   object-fit: cover;
 }
 
-.thanh-tim-kiem input {
-  border: none;
-  outline: none;
-  flex: 1;
-}
 
 .nut-tim-kiem {
   background-color: transparent;

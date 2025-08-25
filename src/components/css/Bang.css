@@ -6,4 +6,5 @@
   align-items: stretch;
   border-collapse: collapse;
   margin-top: 1rem;
+  position: relative;
 }

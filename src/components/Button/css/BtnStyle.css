@@ -1,0 +1,82 @@
+.tooltip-btn {
+  display: flex;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  white-space: nowrap;
+}
+
+.tooltip-btn:hover {
+  background-color: #ececec;
+}
+
+.btn-icon {
+  margin-right: 4px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn-icon:hover {
+  background-color: rgb(160, 175, 193, 0.5);
+
+}
+
+.btn-icon>img {
+  width: 25px;
+
+}
+
+.btn-mo-ta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.btn-mo-ta span {
+  display: inline-block;
+  text-align: left;
+}
+
+.btn-mo-ta>span:first-of-type {
+  font-weight: bold;
+}
+
+.btn-icon-1 {
+  width: 30px;
+  height: 30px;
+  padding: auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+.btn-icon-1:hover {
+  background-color: rgb(160, 175, 193, 0.5);
+}
+
+.btn-icon-1>img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+}
+.only-text-btn{
+  font-weight: 700;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border:0.1px solid black;
+  color: black;
+  background-color: white;
+  
+}
+ .ConfirmCancelButtons_box{
+  display: flex;
+  gap:10px;
+  justify-items: flex-end;
+  align-items: center;
+ }

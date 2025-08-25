@@ -1,18 +1,27 @@
-import { useState } from 'react';
-import { KhachHangView } from './../components/MainContentHomePage/KhachHangView.jsx';
-import { ThanhChuyenDoi } from './../components/ThanhChuyenDoi.jsx';
-import './css/HomePage.css';
+// import { useState } from "react";
+import { KhachHangView } from "./../components/MainContentHomePage/KhachHangView.jsx";
+import { ThanhChuyenDoi } from "./../components/ThanhChuyenDoi.jsx";
+import "./css/HomePage.css";
+import { SanPhamView } from "../components/MainContentHomePage/SanPhamView.jsx";
+import { Route, Routes } from "react-router-dom";
+import { DonHangView } from "../components/MainContentHomePage/DonHangView.jsx";
+import { NoView } from "../components/MainContentHomePage/NoView.jsx";
+// import CpnContext from "../contextOfComponents/componentsContext.jsx";
 
-function HomePage() {
-
-  const [MainContent, setMainContent] = useState(<KhachHangView />);
+export default function HomePage() {
   return (
     <>
-      <ThanhChuyenDoi setMainContent={setMainContent} />
+      {/* <CpnContext.Provider> */}
+      <ThanhChuyenDoi />
       <div className="noi-dung">
-        {MainContent}
-       </div>
+        <Routes>
+          <Route path="/" element={<KhachHangView />} />
+          <Route path="/san_pham" element={<SanPhamView />} />
+          <Route path="/don_hang" element={<DonHangView />} />
+          <Route path="/no" element={<NoView />} />
+        </Routes>
+      </div>
+      {/* </CpnContext.Provider> */}
     </>
-  )
+  );
 }
-export default HomePage;

@@ -1,27 +1,55 @@
 import { Bang } from '../Bang.jsx';
 import {ThanhTimKiem} from '../ThanhTimKiem.jsx'
 import { CardItemSanPham } from '../CardItem.jsx';
+import { useEffect, useState } from 'react';
+import { useLocation } from "react-router-dom";
 
 export function SanPhamView() {
-  let khachHangs = [];
-  for(let i = 0; i < 100; i++) {
-    khachHangs.push( <CardItemSanPham sanPham={{ 
-      ten: `Khách hàng ${i + 1}`,
-      gia: `012345678${i}`,
-      donvi: `Địa chỉ ${i + 1}`,
-      moTa: `khachhang${i + 1}@gmail.com` 
-    }} /> );      
-  }
+  const [sanPhams, setSanPhams] = useState(null);
+  const location = useLocation();
+  const fetchData = async () => {
+    const data = await window.san_pham_context.getAll();
+    console.log(data);
+    const sanPhams = {};
+    data.map((sp) => {
+      sanPhams[sp.id] = sp;
+    });
+    setSanPhams(sanPhams);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [location]);
+
+  const keys = Object.keys(sanPhams || {});
 
   return (
-  <>
-        <h2>Danh sách sản phẩm</h2>
-        <ThanhTimKiem />
-        <Bang>         
-          {khachHangs}
-        </Bang>
-  </>
-      
+    <>
+      <h2>Danh sách sản phẩm</h2>
+      <ThanhTimKiem />
+      <Bang>
+        {keys.map((key) => {
+          if (!sanPhams[key]) {
+            delete sanPhams[key];
+            return null; // Skip if sanPhams[key] is undefined
+          }
+
+          return (
+            <CardItemSanPham
+              key={key}
+              sanPham={sanPhams[key]}
+              setSanPham={(updatedSanPham) => {
+                const newSanPhams = {
+                  ...sanPhams,
+                  [key]: updatedSanPham,
+                };
+                setSanPhams(newSanPhams);
+              }}
+            />
+          );
+        })}
+      </Bang>
+    </>
   );
 }
 

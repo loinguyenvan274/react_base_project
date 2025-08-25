@@ -1,0 +1,14 @@
+.btn-add-1-tooltip {
+  position: absolute;
+  top: -50%; /* sẽ bị override bằng JS nếu tràn */
+  left: 104%; /* sẽ bị override bằng JS nếu tràn */
+  background-color: #ffffff;
+  border: 1px solid #e2e0e0;
+  border-radius: 4px;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  color: black;
+  white-space: nowrap;
+}

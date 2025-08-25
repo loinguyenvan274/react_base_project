@@ -8,12 +8,50 @@
 }
 .nut-thanh-chuyen-doi {
   padding: 0.5rem 1rem;
-  background-color: #e0e0e0;
+  background-color: #4a5dc7;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 13px;
 }
 .nut-thanh-chuyen-doi:hover {
-  background-color: #d0d0d0;
+  background-color: #231699;
 }
+
+.btn-add {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0rem 3rem 0rem;
+  background-color: #4a7ddd;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.btn-add:hover {
+  background-color: #20a0db;
+}
+.btn-add img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* .btn-add-tooltip-button{
+  padding: 0.5rem 1rem;
+  margin: 1px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: black;
+}
+.btn-add-tooltip-button:hover{
+  border: 1px solid #000000;
+
+} */

@@ -1,0 +1,10 @@
+.add-btn-block {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+}

@@ -8,13 +8,14 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "electron": "electron electron/main.mjs",
-     "start": "concurrently \"npm run dev\" \"npm run electron\""
-   
+    "electron": "electron src/window_app.mjs",
+    "start": "concurrently \"npm run dev\" \"npm run electron\""
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.8.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

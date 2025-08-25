@@ -1,0 +1,14 @@
+.title_box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.title_content {
+    text-align: left;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 630;
+}
